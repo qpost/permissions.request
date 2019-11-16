@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="permissions.polyfill.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div id="content">
+			<noscript>Please enable JavaScript.</noscript>
+		</div>
+
+		<script type="text/javascript">
+			var body = document.getElementById("content");
+
+			if("permissions" in navigator){
+				body.innerHTML = "Permissions API can be used.";
+			} else {
+				body.innerHTML = "Permissions API can not be used.";
+			}
+		</script>
+	</body>
+</html>
